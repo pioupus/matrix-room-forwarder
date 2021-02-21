@@ -80,6 +80,7 @@ class Callbacks(object):
                 logger.debug(
                     f"will forward to :{self.config.forwards[forward_name]['to']} | "
                 ) 
+                await send_text_to_room(self.client, self.config.forwards[forward_name]['to'], event.body)
         logger.debug(
             f"Bot message received for room {room.display_name} | "
             f"{room.user_name(event.sender)}: {msg}"

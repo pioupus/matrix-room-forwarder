@@ -76,9 +76,9 @@ class Callbacks(object):
  
 
         for forward_name in self.config.forwards:
-            if self.config.forwards['from'] == room.display_name:
+            if self.config.forwards[forward_name]['from'] == room.display_name:
                 logger.debug(
-                    f"will forward to :{self.config.forwards['to']} | "
+                    f"will forward to :{self.config.forwards[forward_name]['to']} | "
                 ) 
         logger.debug(
             f"Bot message received for room {room.display_name} | "

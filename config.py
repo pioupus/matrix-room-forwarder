@@ -105,7 +105,7 @@ class Config(object):
             ["command_prefix"], default="!c") + " "
 
         self.forwards = self._get_cfg(
-            ["forwards", "trust_own_devices"], default=False, required=True)
+            ["forwards"], default=False, required=True)
       
         if not self.user_password and not self.access_token:
             raise ConfigError(

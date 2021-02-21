@@ -76,7 +76,20 @@ class Callbacks(object):
         logger.debug(
             f"config:{str(self.config.forwards)} | "
         )
-
+        logger.debug(
+            f"config:{str(self.config.forwards["test"])} | "
+        )        
+        logger.debug(
+            f"config:{str(self.config.forwards.keys())} | "
+        )     
+        logger.debug(
+            f"config:{str(self.config.forwards.test)} | "
+        )
+        
+        
+        logger.debug(
+            f"config:{str(type(self.config.forwards))} | "
+        )
         logger.debug(
             f"Bot message received for room {room.display_name} | "
             f"{room.user_name(event.sender)}: {msg}"

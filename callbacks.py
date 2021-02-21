@@ -73,21 +73,13 @@ class Callbacks(object):
         if event.sender == self.client.user:
             return
 
-        logger.debug(
-            f"config:{str(self.config.forwards)} | "
-        )
-        logger.debug(
-            f"config:{str(self.config.forwards['test'])} | "
-        )        
-        logger.debug(
-            f"config:{str(self.config.forwards.keys())} | "
-        )     
+ 
 
-        
-        
-        logger.debug(
-            f"config:{str(type(self.config.forwards))} | "
-        )
+        for forward_name in self.config.forwards:
+            if self.config.forwards['from'] == room.display_name:
+                logger.debug(
+                    f"will forward to :{self.config.forwards['to']} | "
+                ) 
         logger.debug(
             f"Bot message received for room {room.display_name} | "
             f"{room.user_name(event.sender)}: {msg}"

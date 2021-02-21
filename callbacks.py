@@ -82,9 +82,7 @@ class Callbacks(object):
         logger.debug(
             f"config:{str(self.config.forwards.keys())} | "
         )     
-        logger.debug(
-            f"config:{str(self.config.forwards.test)} | "
-        )
+
         
         
         logger.debug(

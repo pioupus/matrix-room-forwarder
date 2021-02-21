@@ -74,7 +74,7 @@ class Callbacks(object):
             return
 
         logger.debug(
-            f"config:{str(config.forwards)} | "
+            f"config:{str(self.config.forwards)} | "
         )
 
         logger.debug(

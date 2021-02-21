@@ -74,10 +74,13 @@ class Callbacks(object):
             return
 
         logger.debug(
+            f"config:{str(config.fowards)} | "
+        )
+
+        logger.debug(
             f"Bot message received for room {room.display_name} | "
             f"{room.user_name(event.sender)}: {msg}"
         )
-
         # Process as message if in a public room without command prefix
         has_command_prefix = msg.startswith(self.command_prefix)
         # room.is_group is often a DM, but not always.

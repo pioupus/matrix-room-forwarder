@@ -32,6 +32,7 @@ from nio import (
 import logging
 import traceback
 from command_dict import CommandDict
+from chat_functions import send_text_to_room
 
 logger = logging.getLogger(__name__)
 

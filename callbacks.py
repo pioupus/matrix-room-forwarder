@@ -78,6 +78,9 @@ class Callbacks(object):
 
         for forward_name in self.config.forwards:
             if self.config.forwards[forward_name]['from'] == room.display_name:
+                logger.debug(f"Message from{event.sender}")
+                for name in room.names:
+                    logger.debug(f"Possible names: { str(name)}")
                 logger.debug(
                     f"will forward to :{self.config.forwards[forward_name]['to']} | {str(event.sender)} | {str(type(event))} | {str(vars(event))} | {vars(room)}"
                 ) 

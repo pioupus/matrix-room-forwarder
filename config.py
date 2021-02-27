@@ -73,8 +73,6 @@ class Config(object):
             ["storage", "database_filepath"], required=True)
         self.store_filepath = self._get_cfg(
             ["storage", "store_filepath"], required=True)
-        self.command_dict_filepath = self._get_cfg(
-            ["storage", "command_dict_filepath"], default=None)
 
         # Create the store folder if it doesn't exist
         if not os.path.isdir(self.store_filepath):

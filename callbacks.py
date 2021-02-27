@@ -79,9 +79,9 @@ class Callbacks(object):
         for forward_name in self.config.forwards:
             if self.config.forwards[forward_name]['from'] == room.display_name:
                 logger.debug(
-                    f"will forward to :{self.config.forwards[forward_name]['to']} | {str(event.sender)}"
+                    f"will forward to :{self.config.forwards[forward_name]['to']} | {str(event.sender)} | {str(type(event)) | {str(vars(event)}"
                 ) 
-                await send_text_to_room(self.client, self.config.forwards[forward_name]['to'], f"Message from Arnes forwarding bot: \n{ event.sender } wrote in group '{room.display_name}': {event.body}", notice=True)
+                await send_text_to_room(self.client, self.config.forwards[forward_name]['to'], f"Arnes forwarding bot: \n{ event.sender } wrote in group '{room.display_name}': {event.body}", notice=True)
         logger.debug(
             f"Bot message received for room {room.display_name} | "
             f"{room.user_name(event.sender)}: {msg}"

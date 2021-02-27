@@ -75,7 +75,7 @@ class Callbacks(object):
  
 
         for forward_name in self.config.forwards:
-            if self.config.forwards[forward_name]['from'] == room.display_name:
+            if self.config.forwards[forward_name]['from'] == room.display_name or self.config.forwards[forward_name]['from'] == room.room_id:
                 #logger.debug(f"Message from{event.sender}")
                 user_display_name = event.sender
                 for name in room.names:
